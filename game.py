@@ -10,13 +10,13 @@ def game(ans):
         guess = int(input("Guess a number between 1 & 100: "))
         ans_checker(guess)
     except (TypeError, ValueError):
-        guess = int(input("Invalid input! Guess a number between 1 & 100: "))
+        guess = int(input("Invalid input, please try again! \nGuess a number between 1 & 100: "))
         ans_checker(guess)
+
 
 def ans_checker(guess):
     if guess == ans:
-        print("Got it: The number is ", ans)
-        break
+        print(f"Congratulations, you got it! The number is {ans}. :)")
     elif guess > ans:
         print("Too high!")
         game(ans)
@@ -24,8 +24,8 @@ def ans_checker(guess):
         print("Too low!")
         game(ans)
     else:
-        "Something's wrong"
-        break
+        "Something's wrong. Shutting down the game. Please try again later."
+
 
 if __name__ == '__main__':
     print_header()
