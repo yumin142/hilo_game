@@ -5,6 +5,8 @@ def print_header():
     print("Welcome to the HI - LO game!")
     ## testing out branch behaviour
 
+    # this is the 3rd comment
+
 
 def game(ans):
     try:
